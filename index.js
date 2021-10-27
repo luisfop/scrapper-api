@@ -6,7 +6,20 @@ const cheerio = require("cheerio");
 
 const app = express();
 
-const articles = [];
+const articles = [
+  {
+    name: 'The times',
+    address: 'https://www.thetimes.co.uk/environment/climate-change'
+  },
+  {
+    name: 'The Guardian',
+    address: 'https://www.theguardian.com/environment/climate-crisis'
+  },
+  {
+    name: 'Telegraph',
+    address: 'https://www.telegraph.co.uk/climate-change'
+  },
+];
 
 app.get("/", (req, res) => {
   res.json("Welcome to Climate Change News API");
